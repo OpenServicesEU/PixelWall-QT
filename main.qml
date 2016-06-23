@@ -9,7 +9,8 @@ import QtQuick.Controls 1.5
 import QtQuick.Layouts 1.3
 
 Window {
-    id: window1
+    id: window
+    color: "#222222"
     visible: true
     visibility: "FullScreen"
     title: qsTr("PixelWall")
@@ -20,8 +21,8 @@ Window {
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
         source: "pixelwall-logo.svg"
-        sourceSize.width: parent.width
-        sourceSize.height: parent.height
+        sourceSize.width: parent.width*2
+        sourceSize.height: parent.height*2
         transform: [
             Rotation {
                 id: yRot
@@ -42,7 +43,7 @@ Window {
             property: "angle"
             from: 0
             to: 360
-            duration: 4000
+            duration: 10000
         }
     }
 
